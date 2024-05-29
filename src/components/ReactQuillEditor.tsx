@@ -1,10 +1,7 @@
 import {useRef, useState} from 'react';
 import ReactQuill, {Quill} from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import './Editor.css'
 
-const Parchment = Quill.import('parchment');
-const Delta = Quill.import('delta');
 const Inline = Quill.import('blots/inline')
 
 // mark
@@ -62,7 +59,7 @@ function Editor() {
   }
 
   return (
-    <div className="text-editor">
+    <div style={{height:400}}>
       <CustomToolbar/>
       <ReactQuill ref={reactQuillRef}
                   theme="snow"
